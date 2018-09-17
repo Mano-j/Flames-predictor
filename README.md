@@ -4,9 +4,9 @@ Calculates the FLAMES relationship for the two names using python.
 
 Incase you didn't know aready,
 
-  *F ---> Friends
-  *L ---> Love
-  *A ---> Affection
-  *M ---> Marriage
-  *E ---> Enemy
-  *S ---> Siblings
+  *F ---> Friends <br />
+  *L ---> Love <br />
+  *A ---> Affection <br />
+  *M ---> Marriage <br />
+  *E ---> Enemy <br />
+  *S ---> Siblings <br />
