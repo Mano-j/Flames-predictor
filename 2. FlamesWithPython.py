@@ -1,10 +1,15 @@
+# Gets two names and converts them to uppercase and stores them. 
 name11 = input('Enter Your name: ').upper()
-name22 = input('Enter Your dream partner\'s name: ',).upper()
+name22 = input('Enter Your dream partner\'s name: ').upper()
+
+# Removing spaces
 name1 = ''.join(name11.split())
 name2 = ''.join(name22.split())
 i, j = 0, 0
 print('\n')
-print(" Removing common letters \n\t\t", name11, '&', name22)
+
+# Removing common letters in the names.
+print("\tRemoving common letters \n\t\t", name11, '&', name22)
 while i < len(name1):
 
     for j in range(0, len(name2), 1):
@@ -20,6 +25,7 @@ while i < len(name1):
     if not flag:
         i += 1
 
+# Calculating the finalLength for the FLAMES calculation.
 finalLength = len(name1) + len(name2)
 print(" FinalLength = ", finalLength)
 
@@ -27,6 +33,8 @@ flames = "FLAMES"
 i = 0
 print("\n Calculating FLAMES for", name11, "&", name22, end='\n')
 print("\t\t ", flames)
+
+# Calculating the relationship.
 while len(flames) != 1:
     count = 0
     while count != finalLength:
@@ -47,6 +55,8 @@ result = {'F': ",are Best Friends.",
           'E': ",are Enemies.",
           'S': ",are Siblings."
           }
+
+# Printing the prediction.
 print("\n   Prediction : \n", name11, '&', name22, result.get(flames))
 
 
