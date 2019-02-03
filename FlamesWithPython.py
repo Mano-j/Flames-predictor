@@ -7,6 +7,7 @@ name1 = ''.join(name11.split())
 name2 = ''.join(name22.split())
 i, j = 0, 0
 print('\n')
+flag = None
 
 # Removing common letters in the names.
 print("\tRemoving common letters \n\t\t", name11, '&', name22)
