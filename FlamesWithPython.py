@@ -9,11 +9,14 @@ i, j = 0, 0
 print('\n')
 flag = None
 
+if len(name1) > len(name2):
+  name1, name2 = name2, name1
+
 # Removing common letters in the names.
 print("\tRemoving common letters \n\t\t", name11, '&', name22)
 while i < len(name1):
 
-    for j in range(0, len(name2), 1):
+    for j in range(0, len(name2)):
         flag = False
         if name1[i] == name2[j]:
             print("Removing -", name1[i], end=' ')
@@ -30,35 +33,35 @@ while i < len(name1):
 finalLength = len(name1) + len(name2)
 print(" FinalLength = ", finalLength)
 
-flames = "FLAMES"
-i = 0
-print("\n Calculating FLAMES for", name11, "&", name22, end='\n')
-print("\t\t ", flames)
+if finalLength == 0:
+  print("You're either a pure narcissist or both your name are anagrams!.")
+else:
+  flames = "FLAMES"
+  i = 0
+  print("\n Calculating FLAMES for", name11, "&", name22, end='\n')
+  print("\t\t ", flames)
 
-# Calculating the relationship.
-while len(flames) != 1:
-    count = 0
-    while count != finalLength:
-        if i < len(flames):
-            i += 1
-            count += 1
-        else:
-            i = 0
-    i -= 1
-    print("Removing - ", flames[i], end=' ')
-    flames = flames[:i] + flames[i+1:]
-    print("\t-->\t", flames)
+  # Calculating the relationship.
+  while len(flames) != 1:
+      count = 0
+      while count != finalLength:
+          if i < len(flames):
+              i += 1
+              count += 1
+          else:
+              i = 0
+      i -= 1
+      print("Removing - ", flames[i], end=' ')
+      flames = flames[:i] + flames[i+1:]
+      print("\t-->\t", flames)
 
-result = {'F': ",are Best Friends.",
-          'L': ",are in Love.",
-          'A': ",are Attracted towards each other.",
-          'M': ",are going to be/ are Married.",
-          'E': ",are Enemies.",
-          'S': ",are Siblings."
-          }
+  result = {'F': ",are Best Friends. :D ",
+            'L': ",are in Love. ♥",
+            'A': ",are Attracted towards each other. *_*",
+            'M': ",are going to be/ are Married. :)",
+            'E': ",are Enemies. ._.",
+            'S': ",are Siblings. :P"
+            }
 
-# Printing the prediction.
-print("\n   Prediction : \n", name11, '&', name22, result.get(flames))
-
-
-
+  # Printing the prediction.
+  print("\n   Prediction : \n", name11, '&', name22, result.get(flames))
